@@ -20,6 +20,11 @@
         "symfony/css-selector": "^5.1",
         "symfony/dom-crawler": "^5.1"
     },
+    "suggest": {
+        "amphp/process": "For using file binary mime type guesser",
+        "amphp/parallel-functions": "For using file info mime type guesser",
+        "ext-fileinfo": "For using file info mime type guesser"
+    },
     "autoload": {
         "psr-4": {
             "Vajexal\\AmpMimeType\\": "src"
