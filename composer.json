@@ -1,0 +1,39 @@
+{
+    "name": "vajexal/amp-mime-type",
+    "description": "Mime type guessing for amphp",
+    "keywords": [
+        "mime-type",
+        "amphp"
+    ],
+    "require": {
+        "amphp/file": "^1.0",
+        "symfony/polyfill-php80": "^1.20"
+    },
+    "require-dev": {
+        "ext-fileinfo": "*",
+        "amphp/http-client": "^4.5",
+        "amphp/http-client-cache": "^1.0",
+        "amphp/parallel-functions": "^1.0",
+        "amphp/php-cs-fixer-config": "dev-master",
+        "amphp/phpunit-util": "^1.4",
+        "amphp/process": "^1.1",
+        "symfony/css-selector": "^5.1",
+        "symfony/dom-crawler": "^5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vajexal\\AmpMimeType\\": "src"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Vajexal\\AmpMimeType\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

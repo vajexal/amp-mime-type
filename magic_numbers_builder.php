@@ -1,0 +1,23 @@
+<?php
+
+use Amp\Cache\FileCache;
+use Amp\Http\Client\Cache\SingleUserCache;
+use Amp\Http\Client\HttpClientBuilder;
+use Amp\Loop;
+use Amp\Sync\LocalKeyedMutex;
+use Vajexal\AmpMimeType\MagicNumbersBuilder;
+
+require_once 'vendor/autoload.php';
+
+Loop::run(function () {
+    $cache = new FileCache('.cache', new LocalKeyedMutex);
+
+    $httpClient          = (new HttpClientBuilder)
+        ->intercept(new SingleUserCache($cache))
+        ->build();
+    $magicNumbersBuilder = new MagicNumbersBuilder($httpClient);
+
+    $magicNumbers = yield $magicNumbersBuilder->build();
+
+    var_export($magicNumbers);
+});
