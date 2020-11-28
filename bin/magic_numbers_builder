@@ -1,6 +1,8 @@
 #!/usr/bin/env php
 <?php
 
+declare(strict_types=1);
+
 use Amp\Cache\FileCache;
 use Amp\Http\Client\Cache\SingleUserCache;
 use Amp\Http\Client\HttpClientBuilder;

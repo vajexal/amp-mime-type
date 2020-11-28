@@ -11,6 +11,8 @@ composer require vajexal/amp-mime-type:dev-master
 ```php
 <?php
 
+declare(strict_types=1);
+
 use Amp\Loop;
 use Vajexal\AmpMimeType\MimeTypeGuesser;
 use function Vajexal\AmpMimeType\mimeTypeGuesser;
