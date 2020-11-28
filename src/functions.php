@@ -40,8 +40,8 @@ function createDefaultMimeTypeGuesser(): Promise
 {
     return call(function () {
         $guessers = [
-            new FileBinaryMimeTypeGuesser,
             new FileInfoMimeTypeGuesser,
+            new FileBinaryMimeTypeGuesser,
             new MagicNumbersMimeTypeGuesser,
         ];
 

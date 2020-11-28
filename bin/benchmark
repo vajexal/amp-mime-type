@@ -1,0 +1,31 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+use Amp\Loop;
+use Vajexal\AmpMimeType\FileBinaryMimeTypeGuesser;
+use Vajexal\AmpMimeType\FileInfoMimeTypeGuesser;
+use Vajexal\AmpMimeType\MagicNumbersMimeTypeGuesser;
+
+require_once 'vendor/autoload.php';
+
+Loop::run(function () {
+    $guessers = [
+        new FileBinaryMimeTypeGuesser,
+        new FileInfoMimeTypeGuesser,
+        new MagicNumbersMimeTypeGuesser,
+    ];
+
+    foreach ($guessers as $guesser) {
+        $time = hrtime(true);
+
+        for ($i = 0; $i < 500; $i++) {
+            $mimeType = yield $guesser->guess('tests/fixtures/image.png');
+
+            assert($mimeType === 'image/png');
+        }
+
+        printf("%s - %.2fs\n", get_class($guesser), (hrtime(true) - $time) / 1e9);
+    }
+});
