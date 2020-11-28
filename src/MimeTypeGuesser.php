@@ -14,6 +14,7 @@ interface MimeTypeGuesser
     /**
      * @param string $path
      * @return Promise<string>
+     * @throws MimeTypeException
      */
     public function guess(string $path): Promise;
 }
