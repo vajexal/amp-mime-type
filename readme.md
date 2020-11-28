@@ -26,3 +26,9 @@ Loop::run(function () {
     echo yield $guesser->guess('image.png'), PHP_EOL;
 });
 ```
+
+#### Guessers
+
+- [FileInfoMimeTypeGuesser](src/FileInfoMimeTypeGuesser.php) - using [mime_content_type](https://www.php.net/manual/en/function.mime-content-type.php) function
+- [FileBinaryMimeTypeGuesser](src/FileBinaryMimeTypeGuesser.php) - using [file](https://www.man7.org/linux/man-pages/man1/file.1.html) command
+- [MagicNumbersMimeTypeGuesser](src/MagicNumbersMimeTypeGuesser.php) - using [magic numbers](https://en.wikipedia.org/wiki/List_of_file_signatures) detection
