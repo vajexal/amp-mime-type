@@ -6,6 +6,7 @@
         "amphp"
     ],
     "require": {
+        "php": "^7.4|^8.0",
         "amphp/file": "^1.0",
         "symfony/polyfill-php80": "^1.20"
     },
