@@ -1944,7 +1944,7 @@ class MagicNumbersMimeTypeGuesser implements MimeTypeGuesser
                     $bytes = \bin2hex($bytes);
 
                     foreach ($tests['tests'] as $test) {
-                        if (str_starts_with($bytes, $test)) {
+                        if (\str_starts_with($bytes, $test)) {
                             return $this->magic[$ext]['mime'][0];
                         }
                     }

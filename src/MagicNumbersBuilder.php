@@ -48,7 +48,7 @@ class MagicNumbersBuilder
             $lines = \explode(PHP_EOL, $mimeTypes);
 
             return \array_reduce($lines, function ($mimes, $line) {
-                if (!$line || str_starts_with($line, '#')) {
+                if (!$line || \str_starts_with($line, '#')) {
                     return $mimes;
                 }
 

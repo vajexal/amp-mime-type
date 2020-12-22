@@ -29,7 +29,7 @@ abstract class MimeTypeGuesserTest extends AsyncTestCase
     }
 
     /**
-     * overridden in @see MagicNumbersMimeTypeGuesserTest.php
+     * overridden in @see MagicNumbersMimeTypeGuesserTest.
      */
     public function guesserProvider(): array
     {
@@ -93,7 +93,7 @@ abstract class MimeTypeGuesserTest extends AsyncTestCase
     }
 
     /**
-     * overridden in @see FileBinaryMimeTypeGuesserTest.php
+     * overridden in @see FileBinaryMimeTypeGuesserTest.
      */
     public function testForbiddenFile()
     {
