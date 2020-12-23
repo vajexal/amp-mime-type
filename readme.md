@@ -1,5 +1,7 @@
 Mime type guessing for [amphp](https://amphp.org)
 
+[![Build Status](https://github.com/vajexal/amp-mime-type/workflows/Build/badge.svg)](https://github.com/vajexal/amp-mime-type/actions)
+
 ### Installation
 
 ```bash

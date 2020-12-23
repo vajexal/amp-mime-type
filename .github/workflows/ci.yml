@@ -1,4 +1,4 @@
-name: CI
+name: Build
 
 on:
   push:
@@ -47,4 +47,4 @@ jobs:
           PHP_CS_FIXER_IGNORE_ENV: 1
 
       - name: Run tests
-        run: vendor/bin/phpunit tests
+        run: vendor/bin/phpunit
