@@ -5,7 +5,7 @@ Mime type guessing for [amphp](https://amphp.org)
 ### Installation
 
 ```bash
-composer require vajexal/amp-mime-type:dev-master
+composer require vajexal/amp-mime-type
 ```
 
 ### Usage
